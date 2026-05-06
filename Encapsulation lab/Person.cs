@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Encapsulation_lab
 {
-    internal class Person (string firstName, string lastName, int age)
+    internal class Person(string firstName, string lastName, int age)
     {
-        private string FirstName = firstName;
-        private string LastName = lastName;
-        private int Age = age;
+        public string FirstName { get; private set; } = firstName;
+        public string LastName { get; private set; } = lastName;
+        public int Age { get; private set; } = age;
 
         public override string ToString()
         {
