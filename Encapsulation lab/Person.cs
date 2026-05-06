@@ -9,13 +9,7 @@ namespace Encapsulation_lab
         public string FirstName { get; private set; } = firstName;
         public string LastName { get; private set; } = lastName;
         public int Age { get; private set; } = age;
-
         public decimal Salary { get; private set; } = salary;
-
-        //public override string ToString()
-        //{
-        //    return $"{FirstName} {LastName} is {Age} years old.";
-        //}
 
         public override string ToString()
         {
