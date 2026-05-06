@@ -12,10 +12,16 @@ namespace Encapsulation_lab
 
         public decimal Salary { get; private set; } = salary;
 
+        //public override string ToString()
+        //{
+        //    return $"{FirstName} {LastName} is {Age} years old.";
+        //}
+
         public override string ToString()
         {
-            return $"{FirstName} {LastName} is {Age} years old.";
+            return $"{FirstName} {LastName} receives {Salary} dollars.";
         }
+
 
         public void IncreaseSalary(decimal percentage)
         {
