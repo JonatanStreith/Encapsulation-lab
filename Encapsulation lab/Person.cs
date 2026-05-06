@@ -16,5 +16,10 @@ namespace Encapsulation_lab
         {
             return $"{FirstName} {LastName} is {Age} years old.";
         }
+
+        public void IncreaseSalary(decimal percentage)
+        {
+            Salary += Salary * percentage;
+        }
     }
 }
