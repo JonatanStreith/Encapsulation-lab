@@ -14,10 +14,10 @@ namespace Encapsulation_lab
                 var person = new Person(cmdArgs[0],
                 cmdArgs[1],
                 int.Parse(cmdArgs[2]),
-                decimal.Parse(cmdArgs[3]));
+                decimal.Parse(cmdArgs[3].Replace(".", ",")));
                 persons.Add(person);
             }
-            var bonus = decimal.Parse(Console.ReadLine());
+            var bonus = decimal.Parse(Console.ReadLine().Replace(".", ","));
             persons.ForEach(p => p.IncreaseSalary(bonus));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
         }
