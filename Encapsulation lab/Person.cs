@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Encapsulation_lab
 {
-    internal class Person(string firstName, string lastName, int age, decimal salary)
+    public class Person(string firstName, string lastName, int age, decimal salary)
     {
         public string FirstName
         {
