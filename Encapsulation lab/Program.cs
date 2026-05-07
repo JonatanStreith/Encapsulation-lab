@@ -8,9 +8,9 @@ namespace Encapsulation_lab
         {
             var lines = 5;
             var persons = new List<Person>();
-            try
+            for (int i = 0; i < lines; i++)
             {
-                for (int i = 0; i < lines; i++)
+                try
                 {
                     var cmdArgs = Console.ReadLine().Split();
                     var person = new Person(cmdArgs[0],
@@ -19,8 +19,8 @@ namespace Encapsulation_lab
                     decimal.Parse(cmdArgs[3].Replace(".", ",")));
                     persons.Add(person);
                 }
+                catch (Exception e) { Console.WriteLine(e.Message); }
             }
-            catch (Exception e) { Console.WriteLine(e.Message); }
 
             var bonus = decimal.Parse(Console.ReadLine().Replace(".", ","));
             persons.ForEach(p => p.IncreaseSalary(bonus));
