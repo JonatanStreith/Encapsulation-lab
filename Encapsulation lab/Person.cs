@@ -9,6 +9,8 @@ namespace Encapsulation_lab
 {
     public class Person
     {
+        private int _ageOfSeniority = 30;
+
         private string _firstName;
         private string _lastName;
         private int _age;
@@ -66,7 +68,10 @@ namespace Encapsulation_lab
 
         public void IncreaseSalary(decimal percentage)
         {
-            Salary += Salary * percentage / 100;
+            if (Age < _ageOfSeniority)
+                Salary += Salary * (percentage / 100 / 2);
+            else
+                Salary += Salary * (percentage / 100);
         }
     }
 }
