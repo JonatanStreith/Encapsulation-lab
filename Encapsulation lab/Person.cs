@@ -66,7 +66,7 @@ namespace Encapsulation_lab
 
         public void IncreaseSalary(decimal percentage)
         {
-            Salary += Salary * percentage;
+            Salary += Salary * percentage / 100;
         }
     }
 }
